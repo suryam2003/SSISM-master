@@ -69,7 +69,7 @@ Router.get('/getStudentList', StudentList.getStudentList);
 // InterviewRequest API's
 Router.post('/postInterviewRequest', InterviewRequest.interviewRequestPost);
 Router.get('/getInterviewRequest', InterviewRequest.getInterviewrequest);
-
+// https://itegserver.herokuapp.com/getInterviewRequest  Interview Request GET API
 
 // `   "intvName":"Yogendra Rajput",
 //     "intvEmail":"yogendrarajput@ssism.org",
