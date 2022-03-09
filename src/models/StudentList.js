@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const StudentListSchema = new mongoose.Schema({
 
-    data: [{
+    
         studentName: {
             type: String,
             required: true,
@@ -23,9 +23,7 @@ const StudentListSchema = new mongoose.Schema({
         status: {
             type: String,
             required: true
-        },
-    }
-    ]
+        }
 
 
 })
