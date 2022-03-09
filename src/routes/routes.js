@@ -19,8 +19,8 @@ const InterviewRequest = require('../controller/InterviewRequest.controller');
 
 // require('./trainning.routes')(Router);
 
-Router.get('/',async(req,res)=>{
-res.send('ok server is working')
+Router.get('/', async (req, res) => {
+    res.send('ok server is working')
 
 });
 
@@ -54,12 +54,32 @@ Router.get('/getProvideJob', provideJob.getProvidejob);
 
 // Suryam
 
-Router.post('/postStudentList',StudentList.studentListPost);
-Router.get('/getStudentList',StudentList.getStudentList);
+// Student List API's
+Router.post('/postStudentList', StudentList.studentListPost);
+Router.get('/getStudentList', StudentList.getStudentList);
 // https://itegserver.herokuapp.com/getStudentList  GET API for Student List
 
-Router.post('/postInterviewRequest',InterviewRequest.interviewRequestPost);
-Router.get('/getInterviewRequest',InterviewRequest.getInterviewrequest);
+    // "studentName": "Shivani Joshi",
+    // "skills": "NodeJS SQL",
+    // "catagoury": "Backend Developer",
+    // "progress": "100%",
+    // "status": "Completed"
+
+
+// InterviewRequest API's
+Router.post('/postInterviewRequest', InterviewRequest.interviewRequestPost);
+Router.get('/getInterviewRequest', InterviewRequest.getInterviewrequest);
+
+
+// `   "intvName":"Yogendra Rajput",
+//     "intvEmail":"yogendrarajput@ssism.org",
+//     "meetLink":"https://meet.google.com/eoc-agsr-xqa",
+//     "compName":"Think AI",
+//     "date":"10/03/2022",
+//     "time":"12:00 pm",
+//     "invitedStudent":"Shubham Vishwakarma",
+//     "sortMsg":"I am inviting you for an internship."
+
 
 
 module.exports = Router;

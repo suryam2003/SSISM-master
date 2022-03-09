@@ -1,10 +1,10 @@
-const interviewRequest = require('../models/InterviewRequest');
+const interviewRequests = require('../models/InterviewRequest');
 
 exports.interviewRequestPost = async (req, res) => {
     //    console.log("placed API Student");
     try {
         console.log(res.body);
-        const interviewRequest = new interviewRequest(req.body);
+        const interviewRequest = new interviewRequests(req.body);
         console.log(interviewRequest);
         const result = await interviewRequest.save();
         console.log(result);
@@ -17,7 +17,7 @@ exports.interviewRequestPost = async (req, res) => {
 
 exports.getInterviewrequest = async (req, res) => {
     console.log("Interview Request GET API...");
-    const getInterviewRequest = await interviewRequest.find();
+    const getInterviewRequest = await interviewRequests.find();
     console.log(getInterviewRequest);
     res.status(200).send(getInterviewRequest);
 };
