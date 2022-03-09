@@ -1,4 +1,3 @@
-
 const TrainningSchema = require("../models/trainning");
 
 exports.postTrainning = async (req, res) => {

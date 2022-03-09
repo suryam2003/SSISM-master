@@ -9,6 +9,10 @@ const trainning = require('../controller/trainning.controller');
 const PlacedSTD = require('../controller/PlacedSTD.controller');
 const provideJob = require('../controller/provideJob.controller');
 
+const StudentList = require('../controller/StudentList.controler');
+
+
+
 
 
 // require('./trainning.routes')(Router);
@@ -45,6 +49,11 @@ Router.get('/getAlertJob', AlertJob.getAlertJob);
 Router.post('/postProvideJob', provideJob.providejobPost);
 Router.get('/getProvideJob', provideJob.getProvidejob);
 
+
+// Suryam
+
+Router.post('/postStudentList',StudentList.studentListPost);
+Router.get('/getStudentList',StudentList.getStudentList);
 
 
 module.exports = Router;
