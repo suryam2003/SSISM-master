@@ -1,6 +1,4 @@
-const express = require("express");
 const mongoose = require("mongoose");
-const validator = require("validator");
 
 const StudentListSchema = new mongoose.Schema({
     studentName: {

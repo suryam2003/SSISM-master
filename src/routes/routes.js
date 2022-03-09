@@ -9,8 +9,10 @@ const trainning = require('../controller/trainning.controller');
 const PlacedSTD = require('../controller/PlacedSTD.controller');
 const provideJob = require('../controller/provideJob.controller');
 
-const StudentList = require('../controller/StudentList.controler');
 
+//Suryam
+const StudentList = require('../controller/StudentList.controler');
+const InterviewRequest = require('../controller/InterviewRequest.controller');
 
 
 
@@ -54,6 +56,10 @@ Router.get('/getProvideJob', provideJob.getProvidejob);
 
 Router.post('/postStudentList',StudentList.studentListPost);
 Router.get('/getStudentList',StudentList.getStudentList);
+// https://itegserver.herokuapp.com/getStudentList  GET API for Student List
+
+Router.post('/postInterviewRequest',InterviewRequest.interviewRequestPost);
+Router.get('/getInterviewRequest',InterviewRequest.getInterviewrequest);
 
 
 module.exports = Router;
