@@ -1,10 +1,10 @@
-const providejob = require('../models/StudentList');
+const studentList = require('../models/StudentList');
 
 exports.studentListPost = async (req, res) => {
     //    console.log("placed API Student");
     try {
         console.log(res.body);
-        const studentList = new providejob(req.body);
+        const studentList = new studentList(req.body);
         console.log(studentList);
         const result = await studentList.save();
         console.log(result);
